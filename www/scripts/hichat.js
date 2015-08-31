@@ -1,9 +1,5 @@
 /*
- *hichat v0.4.2
- *Wayou Mar 28,2014
  *MIT license
- *view on GitHub:https://github.com/wayou/HiChat
- *see it in action:http://hichat.herokuapp.com/
  */
 window.onload = function() {
     var hichat = new HiChat();
@@ -25,7 +21,7 @@ HiChat.prototype = {
             document.getElementById('info').textContent = '!nickname is taken, choose another pls';
         });
         this.socket.on('loginSuccess', function() {
-            document.title = 'hichat | ' + document.getElementById('nicknameInput').value;
+            document.title = 'FSE HW1 | ' + document.getElementById('nicknameInput').value;
             document.getElementById('loginWrapper').style.display = 'none';
             document.getElementById('messageInput').focus();
         });
@@ -88,7 +84,8 @@ HiChat.prototype = {
         document.getElementById('clearBtn').addEventListener('click', function() {
             document.getElementById('historyMsg').innerHTML = '';
         }, false);
-        document.getElementById('sendImage').addEventListener('change', function() {
+        
+        /*document.getElementById('sendImage').addEventListener('change', function() {
             if (this.files.length != 0) {
                 var file = this.files[0],
                     reader = new FileReader(),
@@ -137,8 +134,8 @@ HiChat.prototype = {
             docFragment.appendChild(emojiItem);
         };
         emojiContainer.appendChild(docFragment);
-    },
-    _displayNewMsg: function(user, msg, color) {
+    },*/
+  /*  _displayNewMsg: function(user, msg, color) {
         var container = document.getElementById('historyMsg'),
             msgToDisplay = document.createElement('p'),
             date = new Date().toTimeString().substr(0, 8),
@@ -173,4 +170,4 @@ HiChat.prototype = {
         };
         return result;
     }
-};
+};*/
