@@ -85,7 +85,7 @@ HiChat.prototype = {
             document.getElementById('historyMsg').innerHTML = '';
         }, false);
         
-        /*document.getElementById('sendImage').addEventListener('change', function() {
+        document.getElementById('sendImage').addEventListener('change', function() {
             if (this.files.length != 0) {
                 var file = this.files[0],
                     reader = new FileReader(),
@@ -134,8 +134,8 @@ HiChat.prototype = {
             docFragment.appendChild(emojiItem);
         };
         emojiContainer.appendChild(docFragment);
-    },*/
-  /*  _displayNewMsg: function(user, msg, color) {
+    },
+    _displayNewMsg: function(user, msg, color) {
         var container = document.getElementById('historyMsg'),
             msgToDisplay = document.createElement('p'),
             date = new Date().toTimeString().substr(0, 8),
@@ -170,4 +170,4 @@ HiChat.prototype = {
         };
         return result;
     }
-};*/
+};
